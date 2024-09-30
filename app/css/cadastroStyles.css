@@ -1,0 +1,201 @@
+/* Estilos gerais */
+.cadastro-container {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #f04b37;
+    color: white;
+    padding: 1rem;
+    height: calc(100vh - 60px);
+    position: fixed;
+    top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .user-photo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  /* Área de logout */
+  .logout {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logout-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  
+  .logout-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    min-height: 40px;
+  }
+  
+  /* Conteúdo principal */
+  .main-content {
+    margin-left: 270px;
+    padding: 2rem;
+    width: calc(100% - 270px);
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+  }
+  
+  .top-bar {
+    background-color: #0431B2;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .menu {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menu h4 {
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+  
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .menu button {
+    margin-bottom: 1rem;
+    cursor: pointer;
+  }
+  
+  /* Botões */
+  .button-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Estilo específico para os botões */
+  .btn.btn-buscar {
+    background-color: #0431B2;
+  }
+  
+  .btn.btn-novo {
+    background-color: #439B23;
+  }
+  
+  .btn.btn-export {
+    background-color: #FF6947;
+  }
+  
+  /* Formulário */
+  .form-container {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-row-group {
+    display: flex;
+    gap: 1rem; /* Espaçamento entre os campos */
+    width: 100%; /* Para garantir que ocupe a largura total */
+  }
+  
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Para ocupar espaço igual */
+  }
+  
+  .bordered-input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    width: 400px; /* Ajusta a largura de todos os campos */
+  }
+  
+  /* Tabela */
+  .table {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .table th,
+  .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .table th:first-child,
+  .table td:first-child {
+    width: 60px; /* Largura reduzida da primeira coluna */
+  }
+  
+  /* Paginação */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .pagination-button {
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .pagination-button:hover {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+  }
+  
+  /* Ícones de edição e remoção */
+  .btn-edit,
+  .btn-delete {
+    cursor: pointer;
+  }
+  
+  .btn-edit img,
+  .btn-delete img {
+    width: 20px;
+    height: 20px;
+  }
+  
