@@ -64,10 +64,9 @@
     cursor: pointer;
     margin-bottom: 1rem;
   }
-  
-  .menu ul {
-    padding: 0;
-    margin-bottom: 1rem;
+
+  .menu li {
+    margin-bottom: 10px;
   }
   
   .menu button {
@@ -183,3 +182,4 @@
     height: 20px;
     margin-right: 4px;
   }
+  
