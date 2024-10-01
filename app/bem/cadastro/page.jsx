@@ -18,10 +18,10 @@ export default function CadastroBem() {
   const handleNovo = () => {
     const novoBem = {
       id: bens.length + 1,
-      invoice: `INV00${bens.length + 1}`,
+      codigo: `COD00${bens.length + 1}`,
+      descricao,
+      itens,
       status,
-      method: 'Bank Transfer',
-      amount: '$100.00',
     };
     setBens([...bens, novoBem]);
   };
@@ -104,7 +104,7 @@ export default function CadastroBem() {
             </div>
             <div className="form-row">
               <label>Itens</label>
-              <select value={itens} onChange={(e) => setItens(e.target.value)} className="bordered-input">
+              <select value={itens} onChange={(e) => setItens(e.target.value)} className="bordered-input select-input">
                 {[...Array(10).keys()].map((n) => (
                   <option key={n + 1} value={n + 1}>{n + 1}</option>
                 ))}
@@ -124,7 +124,7 @@ export default function CadastroBem() {
             </div>
             <div className="form-row">
               <label>Status</label>
-              <select value={status} onChange={(e) => setStatus(e.target.value)} className="bordered-input">
+              <select value={status} onChange={(e) => setStatus(e.target.value)} className="bordered-input select-input">
                 <option value="Retirado">Retirado</option>
                 <option value="Devolvido">Devolvido</option>
               </select>
@@ -134,7 +134,7 @@ export default function CadastroBem() {
 
         <div className="button-group">
           <button className="btn btn-buscar">Buscar</button>
-          <button className="btn btn-novo" onClick={handleNovo}>Novo</button>
+          <button className="btn btn-novo">Novo</button>
           <button className="btn btn-export">Exportar csv</button>
         </div>
 
@@ -143,10 +143,10 @@ export default function CadastroBem() {
           <thead>
             <tr>
               <th></th>
-              <th>Invoice</th>
+              <th>Código</th>
+              <th>Itens</th>
+              <th>Descrição</th>
               <th>Status</th>
-              <th>Method</th>
-              <th>Amount</th>
             </tr>
           </thead>
           <tbody>
@@ -160,10 +160,10 @@ export default function CadastroBem() {
                     <img src="/images/remove.png" alt="Remove" />
                   </button>
                 </td>
-                <td>{bem.invoice}</td>
+                <td>{bem.codigo}</td>
+                <td>{bem.itens}</td>
+                <td>{bem.descricao}</td>
                 <td>{bem.status}</td>
-                <td>{bem.method}</td>
-                <td>{bem.amount}</td>
               </tr>
             ))}
           </tbody>
