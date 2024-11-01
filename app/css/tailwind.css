@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input-custom {
+    border-color: #FF28B9;
+  }
+  
+  .input-custom:focus {
+    outline: none;
+    border-color: #0431B2;
+  }
+  
+  .input-custom:hover {
+    border-color: #0431B2;
+  }
