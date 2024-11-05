@@ -2,6 +2,7 @@
 
 import { useState} from "react";
 import { useRouter } from "next/navigation";
+//import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../../../components/ui/button";
@@ -48,6 +49,20 @@ export default function CadastroBem() {
   const [dialogEditPosition] = useState({ top: "71%", left: "50%" });
   const [dialogRemovePosition] = useState({ top: "61%", left: "50%" });
 
+  // const { data: session, statusAuth } = useSession();
+
+  // if (statusAuth === "loading") {
+  //   return <p>Carregando...</p>;
+  // }
+
+  // if (!session) {
+  //   return (
+  //     <div>
+  //       <p>Você não está autenticado.</p>
+  //     </div>
+  //   );
+  // }
+
   const handleNovo = () => {
     const novoBem = {
       id: bens.length + 1,
@@ -92,7 +107,7 @@ export default function CadastroBem() {
           <div className="rounded-full">
             <Image src="/images/user.png" alt="User" width={40} height={40} />
           </div>
-          <p className="ml-2 font-bold">Nome do Usuário</p>
+          <p className="ml-2 font-bold">Nome do Usuario</p>
         </div>
 
         <Collapsible open={isCadastroOpen} onOpenChange={setIsCadastroOpen}>
